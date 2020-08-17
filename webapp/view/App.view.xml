@@ -1,11 +1,84 @@
-<mvc:View controllerName="SF.SMT_FINANCE.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content></content>
-				</Page>
+<mvc:View controllerName="SF.SMT_FINANCE.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	xmlns:l="sap.ui.layout" xmlns:z="sap.suite.ui.microchart" height="100%">
+	<tnt:ToolPage id="tntToolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press=".onSideNavButtonPress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"></OverflowToolbarLayoutData>
+					</layoutData>
+				</Button>
+				<ToolbarSpacer width="550px"/>
+				<Label text="FINANCE DASHBOARD"></Label>
+				<tnt:ToolHeaderUtilitySeparator/>
+				<ToolbarSpacer>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"></OverflowToolbarLayoutData>
+					</layoutData>
+				</ToolbarSpacer>
+				<Button icon="sap-icon://home" type="Transparent" press=".onLogout">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation expanded="true" selectedKey="{/selectedKey}" itemSelect=".onItemSelect">
+				<tnt:NavigationList items="{path: '/navigation'}">
+					<tnt:NavigationListItem text="{title}" icon="{icon}" key="{key}" enabled="{enabled}">
+						<!--<tnt:NavigationListItem text="{title}" key="{key}" enabled="{enabled}"/>-->
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="pageContainer" initialPage="page2">
+				<pages>
+					<ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+					<l:HorizontalLayout  class="gridWrapper horzontalgridcls">
+						<l:Grid>
+								<Label text="Resource Chart I" design="Bold"></Label>
+							<l:content>
+								<FlexBox width="22rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+									<items>
+										<z:InteractiveBarChart labelWidth="25%" selectionChanged="selectionChanged" press="press">
+											<z:bars>
+												<z:InteractiveBarChartBar label="HR" value="10"/>
+												<z:InteractiveBarChartBar label="Financial" value="20"/>
+												<z:InteractiveBarChartBar label="Technical" value="70"/>
+											</z:bars>
+										</z:InteractiveBarChart>
+									</items>
+								</FlexBox>
+							</l:content>
+						</l:Grid>
+						<l:Grid>
+							<Label text="Resource Chart II" design="Bold"></Label>
+							<l:content>
+								<FlexBox width="30rem" height="13rem" alignItems="left" justifyContent="SpaceBetween">
+									<items>
+										<z:InteractiveDonutChart selectionChanged="onSelectionChanged" displayedSegments="4" press="press">
+											<z:segments>
+												<z:InteractiveDonutChartSegment label="Management" value="32" displayedValue="32.0%"/>
+												<z:InteractiveDonutChartSegment label="HR" value="28" displayedValue="28%"/>
+												<z:InteractiveDonutChartSegment label="Financial" value="25" displayedValue="25%"/>
+												<z:InteractiveDonutChartSegment label="Technical" value="15" displayedValue="15%"/>
+											</z:segments>
+										</z:InteractiveDonutChart>
+									</items>
+								</FlexBox>
+							</l:content>
+						</l:Grid>
+					</l:HorizontalLayout>
+				</ScrollContainer>
+				<ScrollContainer id="root2" horizontal="false" vertical="true" height="100%"></ScrollContainer>
+				<ScrollContainer id="root3" horizontal="false" vertical="true" height="100%"></ScrollContainer>
+				<ScrollContainer id="root4" horizontal="false" vertical="true" height="100%">
+					<Text text="This is the root page of the second element"/>
+				</ScrollContainer>
 			</pages>
-		</App>
-	</Shell>
+		</NavContainer>
+	</tnt:mainContents>
+</tnt:ToolPage>
 </mvc:View>
