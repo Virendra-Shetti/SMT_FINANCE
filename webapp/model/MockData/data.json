@@ -1,0 +1,21 @@
+{
+	"selectedKey": "page2",
+	"navigation": [
+		{
+			"title": "Home",
+			"icon": "sap-icon://home"
+		},
+		{
+			"title": "Salary Management",
+			"icon": "sap-icon://monitor-payments"
+		},
+		{
+			"title": "Employee Database",
+			"icon": "sap-icon://database"
+		},
+		{
+			"title": "Salary Slip",
+			"icon": "sap-icon://switch-classes"
+		}
+	]
+}
