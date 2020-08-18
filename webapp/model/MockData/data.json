@@ -1,21 +1,25 @@
 {
-	"selectedKey": "page2",
+	"selectedKey": "root1",
 	"navigation": [
 		{
 			"title": "Home",
-			"icon": "sap-icon://home"
+			"icon": "sap-icon://home",
+			"key":"root1"
 		},
 		{
 			"title": "Salary Management",
-			"icon": "sap-icon://monitor-payments"
+			"icon": "sap-icon://monitor-payments",
+			"key":"root2"
 		},
 		{
 			"title": "Employee Database",
-			"icon": "sap-icon://database"
+			"icon": "sap-icon://database",
+			"key":"root3"
 		},
 		{
 			"title": "Salary Slip",
-			"icon": "sap-icon://switch-classes"
+			"icon": "sap-icon://switch-classes",
+			"key":"root4"
 		}
 	]
 }

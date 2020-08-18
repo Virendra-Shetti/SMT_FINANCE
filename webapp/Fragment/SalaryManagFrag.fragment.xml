@@ -1,0 +1,96 @@
+<core:FragmentDefinition xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout"
+xmlns:sf="sap.ui.layout.form">
+	<m:ComboBox placeholder="Department"></m:ComboBox>
+	<m:ComboBox placeholder="Employee Name"></m:ComboBox>
+	<ObjectPageLayout>
+	<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+					<expandedHeading>
+						<m:Title text="Denise Smith" wrapping="true"/>
+				</expandedHeading>
+					<snappedHeading>
+					<m:FlexBox  fitContainer="true" alignItems="Center">
+						<!--<m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiTinyMarginEnd"/>-->
+						<m:Title text="Denise Smith" wrapping="true"/>
+					</m:FlexBox>
+				</snappedHeading>
+					<snappedContent>
+					<m:Text text=" "/>
+				</snappedContent>
+					<expandedContent>
+					<m:Text text="Senior UI Developer"/>
+				</expandedContent>
+
+				<snappedContent>
+					<m:Text text="Senior UI Developer"/>
+				</snappedContent>
+
+			</ObjectPageDynamicHeaderTitle>
+	</headerTitle>
+		<headerContent>
+			<m:FlexBox wrap="Wrap">
+					<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+						<m:Link text="+33 6 4512 5158"/>
+						<m:Link text="DeniseSmith@sap.com"/>
+					</layout:VerticalLayout>
+
+			</m:FlexBox>
+		</headerContent>
+			
+	</ObjectPageLayout>
+	<m:IconTabBar>
+		<m:items>
+			<m:IconTabFilter text="BASIC INFORMATION">
+				<sf:SimpleForm>
+					<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
+					
+						<m:Label text="Adhaar Number:"></m:Label>
+					<m:Input value="35465768465363" editable="false" width="300px"></m:Input>
+					
+					
+							<m:Label text="PAN Number:"></m:Label>
+						<m:Input value="ASF6435F" editable="false" width="300px"></m:Input>
+							<m:Label text="Bank Name:"></m:Label>
+							<m:Input value="HDFC BANK" editable="false" width="300px"></m:Input>
+							<m:Label text="Bank A/C Number:"></m:Label>
+						<m:Input value="100005647334" editable="false" width="300px"></m:Input>
+							<m:Label text="IFSC Code:"></m:Label>
+							<m:Input value="HDFC12272" editable="false" width="300px"></m:Input>
+					</m:VBox>
+				</sf:SimpleForm>
+			</m:IconTabFilter>
+				<m:IconTabFilter text="ATTENDENCE">
+				<sf:SimpleForm>
+					<m:VBox alignContent="Center"  alignItems="Center" justifyContent="Center">
+						<m:Label text="Standard days"></m:Label>
+						<m:Input value="28" editable="false" width="300px"></m:Input>
+						<m:Label text="worked days"></m:Label>
+						<m:Input value="27" editable="false" width="300px"></m:Input>
+						<m:Label text="LOP"></m:Label>
+						<m:Input value="1" editable="false" width="300px"></m:Input>
+						<m:Label text="Overtime in hrs"></m:Label>
+						<m:Input value="5" editable="false" width="300px"></m:Input>
+					</m:VBox>
+				</sf:SimpleForm>
+			</m:IconTabFilter>
+				<m:IconTabFilter text="SALARY">
+				<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
+					<m:Label text="Basic Salary"></m:Label>
+					<m:Input value="15,000" editable="false" width="300px"></m:Input>
+				    <m:Label text="Allowance"></m:Label>
+					<m:Input value="2,000" editable="false" width="300px"></m:Input>
+					<m:Label text="LOP deduction"></m:Label>
+					<m:Input value="15,000" editable="false" width="300px"></m:Input>
+					<m:Label text="OT/Night shift"></m:Label>
+					<m:Input value="15,000" editable="false" width="300px"></m:Input>
+					<m:Label text="Total Salary"></m:Label>
+					<m:Input value="35,000" editable="false" width="300px"></m:Input>
+					<m:HBox>
+					<m:Button text="Submit" width="150px"></m:Button>
+					<m:Button text="Clear" width="150px"></m:Button>
+					</m:HBox>
+				</m:VBox>
+			</m:IconTabFilter>
+		</m:items>
+	</m:IconTabBar>
+</core:FragmentDefinition>

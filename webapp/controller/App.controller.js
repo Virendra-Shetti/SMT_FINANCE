@@ -7,6 +7,11 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		/////////////////////Getting Diffrent Screen onClick of side tab///////////
+		onItemSelect: function(oEvent){
+			var oItem = oEvent.getParameter("item");
+			this.byId("pageContainer").to(this.getView().createId(oItem.getKey()));
+		},
 		
 		/////////////////////Side Bar Expanding & Collapsing ////////////////
 		onSideNavButtonPress: function(){
