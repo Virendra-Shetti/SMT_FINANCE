@@ -1,5 +1,5 @@
 <mvc:View controllerName="SF.SMT_FINANCE.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt"
-	xmlns:l="sap.ui.layout" xmlns:z="sap.suite.ui.microchart" height="100%">
+	xmlns:l="sap.ui.layout" xmlns:z="sap.suite.ui.microchart" height="100%" xmlns:core="sap.ui.core">
 	<tnt:ToolPage id="tntToolPage">
 		<tnt:header>
 			<tnt:ToolHeader>
@@ -9,7 +9,7 @@
 					</layoutData>
 				</Button>
 				<ToolbarSpacer width="550px"/>
-				<Label text="FINANCE DASHBOARD"></Label>
+				<Label text="FINANCE DEPARTMENT" class="loginLabl"></Label>
 				<tnt:ToolHeaderUtilitySeparator/>
 				<ToolbarSpacer>
 					<layoutData>
@@ -33,7 +33,7 @@
 			</tnt:SideNavigation>
 		</tnt:sideContent>
 		<tnt:mainContents>
-			<NavContainer id="pageContainer" initialPage="page2">
+			<NavContainer id="pageContainer" initialPage="root1">
 				<pages>
 					<ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
 					<l:HorizontalLayout  class="gridWrapper horzontalgridcls">
@@ -72,10 +72,14 @@
 						</l:Grid>
 					</l:HorizontalLayout>
 				</ScrollContainer>
-				<ScrollContainer id="root2" horizontal="false" vertical="true" height="100%"></ScrollContainer>
-				<ScrollContainer id="root3" horizontal="false" vertical="true" height="100%"></ScrollContainer>
+				<ScrollContainer id="root2" horizontal="false" vertical="true" height="100%">
+					<core:Fragment fragmentName="SF.SMT_FINANCE.Fragment.SalaryManagFrag" type="XML"></core:Fragment>
+				</ScrollContainer>
+				<ScrollContainer id="root3" horizontal="false" vertical="true" height="100%">
+					<core:Fragment fragmentName="SF.SMT_FINANCE.Fragment.salaryDB" type="XML"></core:Fragment>
+				</ScrollContainer>
 				<ScrollContainer id="root4" horizontal="false" vertical="true" height="100%">
-					<Text text="This is the root page of the second element"/>
+					<Text text="PDF Section"/>
 				</ScrollContainer>
 			</pages>
 		</NavContainer>
