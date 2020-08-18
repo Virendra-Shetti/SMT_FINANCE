@@ -58,6 +58,10 @@
 				"settings": {
 					"bundleName": "SF.SMT_FINANCE.i18n.i18n"
 				}
+			},
+			"":{
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/MockData/data.json"
 			}
 		},
 		"resources": {
