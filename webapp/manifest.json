@@ -12,6 +12,16 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+			"dataSources": {
+			"mainService": {
+				"uri": "/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
 		}
 	},
 
@@ -62,6 +72,9 @@
 			"":{
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/MockData/data.json"
+			},
+			"EmpSalary":{
+					"dataSource": "mainService"
 			}
 		},
 		"resources": {

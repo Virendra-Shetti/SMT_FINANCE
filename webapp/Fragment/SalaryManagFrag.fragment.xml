@@ -1,7 +1,14 @@
 <core:FragmentDefinition xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout"
 xmlns:sf="sap.ui.layout.form">
-	<m:ComboBox placeholder="Department"></m:ComboBox>
-	<m:ComboBox placeholder="Employee Name"></m:ComboBox>
+	<m:ComboBox placeholder="Department" selectionChange="onSelectionChange" id="ComboBox1">
+		<core:Item text="HR"></core:Item> 
+		<core:Item text="SAP UI5"></core:Item> 
+		<core:Item text="SAP ABAP"></core:Item> 
+		<core:Item text="HYBRIS"></core:Item> 
+	</m:ComboBox>
+	<m:ComboBox placeholder="Employee Name" id="ComboBox2" items="{EmpSalary>/EmployeeDetail}" selectionChange="onPressItem">
+		<core:Item key="{EmpSalary>EmpId}" text="{EmpSalary>EmpName}"></core:Item>
+	</m:ComboBox>
 	<ObjectPageLayout>
 	<headerTitle>
 			<ObjectPageDynamicHeaderTitle>
@@ -44,11 +51,9 @@ xmlns:sf="sap.ui.layout.form">
 				<sf:SimpleForm>
 					<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
 					
-						<m:Label text="Adhaar Number:"></m:Label>
-					<m:Input value="35465768465363" editable="false" width="300px"></m:Input>
-					
-					
-							<m:Label text="PAN Number:"></m:Label>
+					<!--	<m:Label text="Adhaar Number:"></m:Label>-->
+					<!--<m:Input value="35465768465363" editable="false" width="300px"></m:Input>-->
+					<m:Label text="PAN Number:"></m:Label>
 						<m:Input value="ASF6435F" editable="false" width="300px"></m:Input>
 							<m:Label text="Bank Name:"></m:Label>
 							<m:Input value="HDFC BANK" editable="false" width="300px"></m:Input>
@@ -93,4 +98,9 @@ xmlns:sf="sap.ui.layout.form">
 			</m:IconTabFilter>
 		</m:items>
 	</m:IconTabBar>
+	<!--<m:List items="{EmpSalary>/EmployeeDetail}">-->
+	<!--	<m:items>-->
+	<!--		<m:ObjectListItem intro="{EmpSalary>EmpId}"></m:ObjectListItem>-->
+	<!--	</m:items>-->
+	<!--</m:List>-->
 </core:FragmentDefinition>

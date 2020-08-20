@@ -1,0 +1,114 @@
+[
+
+		{
+			"EmpId":100,
+			"EmpName":"Abhilasha",
+			"EmailId":"abhiappaji1991@gmail.com",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":3,
+			"Designation":"SAP UI5 Consultant",
+			"Department":"SAP UI5"
+			
+		},
+			{
+			"EmpId":101,
+			"EmpName":"Virendra",
+			"EmailId":"codingviru@gmail.com",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"SAP UI5 Consultant",
+				"Department":"SAP UI5"
+			
+		},
+		{
+			"EmpId":102,
+			"EmpName":"ShivRaj",
+			"EmailId":"Shivraj@gmail.com",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"SAP UI5 Consultant",
+				"Department":"SAP UI5"
+			
+		},
+		{
+			"EmpId":103,
+			"EmpName":"Manjunath",
+			"EmailId":"Manjunath@gmail.com",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"SAP UI5 Consultant",
+				"Department":"SAP UI5"
+			
+		},
+		{
+			"EmpId":200,
+			"EmpName":"Supriya",
+			"EmailId":"Supriya@gmailcom",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"ABAP Consultant",
+				"Department":"SAP ABAP"
+			
+		},
+		{
+			"EmpId":201,
+			"EmpName":"Sreya",
+			"EmailId":"Sreya@gmail.com",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"ABAP Consultant",
+				"Department":"SAP ABAP"
+			
+		},
+		{
+			"EmpId":202,
+			"EmpName":"Karthik",
+			"EmailId":"Karthik@gmail.com",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"ABAP Consultant",
+				"Department":"SAP ABAP"
+			
+		},
+		{
+			"EmpId":300,
+			"EmpName":"Surya",
+			"EmailId":"Surya@gmailcom",
+			"BasicSalary":15000,
+			"Allowance":2000,
+			"StandardDays":31,
+			"WorkedDays":28,
+			"LOP":1,
+			"OT/NightShift":2,
+			"Designation":"HR Executive",
+				"Department":"HR"
+		}
+		]
