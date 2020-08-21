@@ -1,96 +1,132 @@
 <core:FragmentDefinition xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout"
-xmlns:sf="sap.ui.layout.form">
-	<m:ComboBox placeholder="Department"></m:ComboBox>
-	<m:ComboBox placeholder="Employee Name"></m:ComboBox>
-	<ObjectPageLayout>
-	<headerTitle>
-			<ObjectPageDynamicHeaderTitle>
-					<expandedHeading>
-						<m:Title text="Denise Smith" wrapping="true"/>
-				</expandedHeading>
-					<snappedHeading>
-					<m:FlexBox  fitContainer="true" alignItems="Center">
-						<!--<m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiTinyMarginEnd"/>-->
-						<m:Title text="Denise Smith" wrapping="true"/>
-					</m:FlexBox>
-				</snappedHeading>
-					<snappedContent>
-					<m:Text text=" "/>
-				</snappedContent>
-					<expandedContent>
-					<m:Text text="Senior UI Developer"/>
-				</expandedContent>
+xmlns:form="sap.ui.layout.form" >
 
-				<snappedContent>
-					<m:Text text="Senior UI Developer"/>
-				</snappedContent>
+<m:Input showValueHelp="true" valueHelpRequest="onSelectDept" width="300px" placeholder="Employees"></m:Input>
+<ObjectPageLayout id="idObjectPLay">
+<headerTitle>
+<ObjectPageDynamicHeaderTitle>
+	
+<expandedHeading>
 
-			</ObjectPageDynamicHeaderTitle>
-	</headerTitle>
-		<headerContent>
-			<m:FlexBox wrap="Wrap">
-					<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-						<m:Link text="+33 6 4512 5158"/>
-						<m:Link text="DeniseSmith@sap.com"/>
-					</layout:VerticalLayout>
+<m:Title text="{EmpSalary>EmpName}" wrapping="true" id="idEmpName" />
 
-			</m:FlexBox>
-		</headerContent>
-			
-	</ObjectPageLayout>
-	<m:IconTabBar>
-		<m:items>
-			<m:IconTabFilter text="BASIC INFORMATION">
-				<sf:SimpleForm>
-					<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
-					
-						<m:Label text="Adhaar Number:"></m:Label>
-					<m:Input value="35465768465363" editable="false" width="300px"></m:Input>
-					
-					
-							<m:Label text="PAN Number:"></m:Label>
-						<m:Input value="ASF6435F" editable="false" width="300px"></m:Input>
+</expandedHeading>
+
+<snappedHeading>
+<m:FlexBox fitContainer="true" alignItems="Center">
+<!--<m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiTinyMarginEnd"/>-->
+<m:Title text="{EmpSalary>EmpName}" wrapping="true"/>
+
+</m:FlexBox>
+</snappedHeading>
+<snappedContent>
+<m:Text text=" "/>
+</snappedContent>
+<expandedContent>
+<m:Text text="{EmpSalary>Designation}"/>
+</expandedContent>
+
+<snappedContent>
+<m:Text text="{EmpSalary>Designation}" id="idEmpDesign" />
+</snappedContent>
+
+</ObjectPageDynamicHeaderTitle>
+</headerTitle>
+<headerContent>
+<m:FlexBox wrap="Wrap">
+<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+	<m:Label text="{EmpSalary>EmpId}" id="idEmpid"></m:Label>
+<m:Link text="{EmpSalary>phoneNumber}" id="idEmpPhone" />
+<m:Link text="{EmpSalary>EmailId}"/>
+</layout:VerticalLayout>
+
+</m:FlexBox>
+</headerContent>
+
+
+<sections>
+			<ObjectPageSection title="Salary">
+				<subSections>
+					<ObjectPageSubSection title="Basic Information">
+						<blocks>
+							<form:SimpleForm>
+							<m:VBox alignContent="Center"  alignItems="Center" justifyContent="Center">
+								<m:Label text="PAN Number:"></m:Label>
+						<m:Input value="{EmpSalary>PANNo}" editable="false" width="300px" id="idPAN"></m:Input>
 							<m:Label text="Bank Name:"></m:Label>
-							<m:Input value="HDFC BANK" editable="false" width="300px"></m:Input>
+							<m:Input value="{EmpSalary>BankName}" editable="false" width="300px" id="idBankName"></m:Input>
 							<m:Label text="Bank A/C Number:"></m:Label>
-						<m:Input value="100005647334" editable="false" width="300px"></m:Input>
+						<m:Input value="{EmpSalary>BankACNO}" editable="false" width="300px" id="idBankAc"></m:Input>
 							<m:Label text="IFSC Code:"></m:Label>
-							<m:Input value="HDFC12272" editable="false" width="300px"></m:Input>
-					</m:VBox>
-				</sf:SimpleForm>
-			</m:IconTabFilter>
-				<m:IconTabFilter text="ATTENDENCE">
-				<sf:SimpleForm>
-					<m:VBox alignContent="Center"  alignItems="Center" justifyContent="Center">
+							<m:Input value="{EmpSalary>BankName}" editable="false" width="300px" id="idIFSC"></m:Input>
+								</m:VBox>
+							</form:SimpleForm>
+							</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+			<ObjectPageSection title="Salary">
+				<subSections>
+					<ObjectPageSubSection title="Attendence">
+						<blocks>
+							<form:SimpleForm>
+							<m:VBox alignContent="Center"  alignItems="Center" justifyContent="Center">
 						<m:Label text="Standard days"></m:Label>
-						<m:Input value="28" editable="false" width="300px"></m:Input>
+						<m:Input value="{EmpSalary>StandardDays}" editable="false" width="300px" id="idStandDays"></m:Input>
 						<m:Label text="worked days"></m:Label>
-						<m:Input value="27" editable="false" width="300px"></m:Input>
+						<m:Input value="{EmpSalary>WorkedDays}" editable="false" width="300px" id="idWorkeddays"></m:Input>
 						<m:Label text="LOP"></m:Label>
-						<m:Input value="1" editable="false" width="300px"></m:Input>
+						<m:Input value="{EmpSalary>LOP}" editable="false" width="300px" id="idLopSal"></m:Input>
 						<m:Label text="Overtime in hrs"></m:Label>
-						<m:Input value="5" editable="false" width="300px"></m:Input>
+						<m:Input value="{EmpSalary>nightShift}" editable="false" width="300px" id="idNightshift"></m:Input>
 					</m:VBox>
-				</sf:SimpleForm>
-			</m:IconTabFilter>
-				<m:IconTabFilter text="SALARY">
-				<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+				<ObjectPageSection title="Salary">
+				<subSections>
+					<ObjectPageSubSection title="Salary">
+						<blocks>
+							<form:SimpleForm>
+							<m:VBox alignContent="Center"  alignItems="Center" justifyContent="Center">
+				
+					<m:ComboBox placeholder="Month" width="300px" items="{/selectMonths}" id="monthCombo">
+						<core:Item text="{name}"></core:Item>
+					</m:ComboBox>
+						
+					<m:ComboBox placeholder="Year" width="300px" id="yearCombo">
+						<core:Item text="2016"></core:Item>
+						<core:Item text="2017"></core:Item>
+						<core:Item text="2018"></core:Item>
+						<core:Item text="2019"></core:Item>
+						<core:Item text="2020"></core:Item>
+					</m:ComboBox>
 					<m:Label text="Basic Salary"></m:Label>
-					<m:Input value="15,000" editable="false" width="300px"></m:Input>
+					<m:Input value="{EmpSalary>BasicSalary}" editable="false" width="300px" id="IdBasicSal"></m:Input>
 				    <m:Label text="Allowance"></m:Label>
-					<m:Input value="2,000" editable="false" width="300px"></m:Input>
+					<m:Input value="{EmpSalary>Allowance}" editable="false" width="300px" id="idEmpAllow"></m:Input>
 					<m:Label text="LOP deduction"></m:Label>
-					<m:Input value="15,000" editable="false" width="300px"></m:Input>
+					<m:Input value=" " editable="true" width="300px" id="idLopDed" submit="onChangeLop"></m:Input>
 					<m:Label text="OT/Night shift"></m:Label>
-					<m:Input value="15,000" editable="false" width="300px"></m:Input>
+					<m:Input value=" " editable="true" width="300px" id="idOt" submit="onChangeOt"></m:Input>
 					<m:Label text="Total Salary"></m:Label>
-					<m:Input value="35,000" editable="false" width="300px"></m:Input>
+					<m:Input value=" " editable="false" width="300px" id="idTotalSal"></m:Input>
 					<m:HBox>
-					<m:Button text="Submit" width="150px"></m:Button>
-					<m:Button text="Clear" width="150px"></m:Button>
+					<m:Button text="Submit" width="150px" press="onPressSubmit"></m:Button>
+					<m:Button text="Clear" width="150px" press="onPressClear"></m:Button>
 					</m:HBox>
-				</m:VBox>
-			</m:IconTabFilter>
-		</m:items>
-	</m:IconTabBar>
+					</m:VBox>
+							</form:SimpleForm>
+				    	</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+		</sections>
+</ObjectPageLayout>
+
 </core:FragmentDefinition>
