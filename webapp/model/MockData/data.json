@@ -24,6 +24,7 @@
 	],
 	"selectMonths":[
 {
+<<<<<<< HEAD
 "name":"Janaury",
 "monthKey":"01"
 },
@@ -82,6 +83,43 @@
 "monthKey":"12"
 }
 
+=======
+"name":"Janaury"
+},
+{
+"name":"February"
+},
+{
+"name":"March"
+},
+{
+"name":"April"
+},
+{
+"name":"May"
+},
+{
+"name":"June"
+},
+{
+"name":"July"
+},
+{
+"name":"August"
+},
+{
+"name":"Septamber"
+},
+{
+"name":"October"
+},
+{
+"name":"November"
+},
+{
+"name":"December"
+}
+>>>>>>> refs/remotes/origin/master
 ]
 	
 

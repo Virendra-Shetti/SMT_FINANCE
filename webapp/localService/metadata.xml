@@ -27,7 +27,11 @@
 				<Property Name="IFSCCode" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
 				<Property Name="totalSalary" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
 				<Property Name="Month" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+<<<<<<< HEAD
 				<Property Name="Year" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+=======
+				<Property Name="year" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+>>>>>>> refs/remotes/origin/master
 				<Property Name="LOPDeduction" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
 				<Property Name="NightShiftPay" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
 				<!--<NavigationProperty Name="Employees1" Relationship="NorthwindModel.FK_Employees_Employees" ToRole="Employees1" FromRole="Employees"/>
