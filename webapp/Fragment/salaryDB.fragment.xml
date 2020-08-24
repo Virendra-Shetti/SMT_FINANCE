@@ -1,0 +1,67 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:st="sap.ui.comp.smarttable"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar">
+	<OverflowToolbar>
+		<Label text="Employee Database" design="Bold"></Label>
+		<!--</OverflowToolbar>-->
+		<!--<OverflowToolbar>-->
+		<ToolbarSpacer></ToolbarSpacer>
+		<SearchField search="onSearch" liveChange="onSearch" width="20%">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow"/>
+			</layoutData>
+		</SearchField>
+		<ComboBox placeholder="Select Month" id="idComboMonth" items="{/selectMonths}" class="sapUiTinyMargin" selectionChange="onGetValue1">
+			<core:Item text="{name}"></core:Item>
+		</ComboBox>
+		<ComboBox placeholder="Select Year" id="idComboYear" class="sapUiTinyMargin" selectionChange="onGetValue">
+			<core:Item text="2016"></core:Item>
+			<core:Item text="2017"></core:Item>
+			<core:Item text="2018"></core:Item>
+			<core:Item text="2019"></core:Item>
+			<core:Item text="2020"></core:Item>
+		</ComboBox>
+		<!--<Button icon="sap-icon://switch-views" press="onPressView"></Button>-->
+	</OverflowToolbar>
+	<Table items="{EmpSalary>/EmployeeDetail}" id="myEmpTbl" selectionChange="onSalListPress" mode="SingleSelectMaster">
+		<columns>
+			<Column>
+				<Text text="Employee ID"></Text>
+			</Column>
+			<Column>
+				<Text text="Employee Name"></Text>
+			</Column>
+			<Column>
+				<Text text="Designation"></Text>
+			</Column>
+			<Column>
+				<Text text="Month"></Text>
+			</Column>
+			<Column>
+				<Text text="Salary"></Text>
+			</Column>
+			<Column>
+				<Text text="Year"></Text>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{EmpSalary>EmpId}"></Text>
+					<Text text="{EmpSalary>EmpName}"></Text>
+					<Text text="{EmpSalary>Designation}"></Text>
+					<Text text="{EmpSalary>Month}"></Text>
+					<Text text="{EmpSalary>BasicSalary}"></Text>
+					<Text text="{EmpSalary>Year}"></Text>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	<!--<smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="EmployeeDetail">-->
+	<!--	<smartFilterBar:controlConfiguration>-->
+	<!--		<smartFilterBar:ControlConfiguration key="EmpId" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="false"></smartFilterBar:ControlConfiguration>-->
+	<!--	</smartFilterBar:controlConfiguration>-->
+	<!--</smartFilterBar:SmartFilterBar>-->
+	<!--<st:SmartTable id="smartTable_ResponsiveTable"  tableType="Table" editable="false" entitySet="EmpSalary>/EmployeeDetail"-->
+	<!--	useVariantManagement="true" useTablePersonalisation="true" header="Signiwis Employes" showRowCount="true" useExportToExcel="true"-->
+	<!--	enableAutoBinding="true" persistencyKey="SmartTableAnalytical_Explored" initiallyVisibleFields="EmpSalary>EmpId,EmpSalary>EmpName"></st:SmartTable>-->
+</core:FragmentDefinition>
