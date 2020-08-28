@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:sf="sap.ui.layout.form">
+	<Dialog title="Employee Salary Detail">
+		<sf:SimpleForm id="mySimpleForm1">
+			<Label text="{i18n>EmpId}" design="Bold"></Label>
+			<Text text="{EmpSalary>EmpId}"></Text>
+			<Label text="{i18n>EmpName}" design="Bold"></Label>
+			<Text text="{EmpSalary>EmpName}"></Text>
+			<Label text="{i18n>EmpEmail}" design="Bold"></Label>
+			<Text text="{EmpSalary>EmailId}"></Text>
+			<Label text="{i18n>EmpBasic}" design="Bold"></Label>
+			<Text text="{EmpSalary>BasicSalary}"></Text>
+			<Label text="{i18n>EmpAllow}" design="Bold"></Label>
+			<Text text="{EmpSalary>Allowance}"></Text>
+			<Label text="{i18n>Standdays}" design="Bold"></Label>
+			<Text text="{EmpSalary>StandardDays}"></Text>
+			<Label text="{i18n>Workedays} " design="Bold"></Label>
+			<Text text="{EmpSalary>WorkedDays}"></Text>
+			<Label text="{i18n>EmpLOPDays}" design="Bold"></Label>
+			<Text text="{EmpSalary>LOP}"></Text>
+			<!--<Label text="Emp Name" design="Bold"></Label>-->
+			<!--<Text text="{EmpSalary>OT_NightShift}"></Text>-->
+			<Label text="{i18n>EmpDesign}" design="Bold"></Label>
+			<Text text="{EmpSalary>Designation}"></Text>
+			<!--<Label text="Emp Name" design="Bold"></Label>-->
+			<!--<Text text="{EmpSalary>Department}"></Text>-->
+			<Label text="{i18n>EmpMonth}" design="Bold"></Label>
+			<Text text="{EmpSalary>Month}"></Text>
+			<Label text="{i18n>EmpYear}" design="Bold"></Label>
+			<Text text="{EmpSalary>Year}"></Text>
+		</sf:SimpleForm>
+		<Toolbar>
+		<ToolbarSpacer></ToolbarSpacer>
+		<Button text="Cancel" press="onCloseDetSalFrag"></Button>
+		</Toolbar>
+	</Dialog>
+</core:FragmentDefinition>

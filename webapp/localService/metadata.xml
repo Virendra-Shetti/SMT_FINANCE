@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0"
+		xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+		<Schema Namespace="NerdMeetup.Models" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+			<EntityType Name="EmployeeDetailType">
+				<Key>
+					<PropertyRef Name="EmpId"/>
+				</Key>
+				<Property xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Name="EmpId" Type="Edm.String" Nullable="false"
+					p6:StoreGeneratedPattern="Identity"/>
+				<Property Name="EmpName" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true"/>
+				<Property Name="EmailId" Type="Edm.String"  MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="phoneNumber" Type="Edm.String"  MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="BasicSalary" Type="Edm.Int32" MaxLength="10" FixedLength="false" Unicode="true"/>
+				<Property Name="Allowance" Type="Edm.Int32" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="StandardDays" Type="Edm.Int32" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="WorkedDays" Type="Edm.Int32" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="LOP" Type="Edm.Int32" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="nightShift" Type="Edm.Int32" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="Designation" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="Department" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="BankName" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="BankACNO" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="PANNo" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="IFSCCode" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="totalSalary" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="Month" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="Year" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="LOPDeduction" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<Property Name="NightShiftPay" Type="Edm.String" MaxLength="25" FixedLength="false" Unicode="true"/>
+				<!--<NavigationProperty Name="Employees1" Relationship="NorthwindModel.FK_Employees_Employees" ToRole="Employees1" FromRole="Employees"/>
+			<NavigationProperty Name="Employee1" Relationship="NorthwindModel.FK_Employees_Employees" ToRole="Employees" FromRole="Employees1"/>
+			<NavigationProperty Name="Orders" Relationship="NorthwindModel.FK_Orders_Employees" ToRole="Orders" FromRole="Employees"/>
+			<NavigationProperty Name="Territories" Relationship="NorthwindModel.EmployeeTerritories" ToRole="Territories" FromRole="Employees"/>-->
+			</EntityType>
+			<ComplexType Name="LocationDetail"/>
+			<EntityContainer Name="NerdMeetups" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="EmployeeDetail" EntityType="NerdMeetup.Models.EmployeeDetailType"/>
+				<FunctionImport Name="FindUpcomingMeetups" EntitySet="EmployeeDetail" ReturnType="Collection(NerdMeetup.Models.EmployeeDetailType)" m:HttpMethod="GET"/>
+			</EntityContainer>
+		</Schema>
+		
+	</edmx:DataServices>
+</edmx:Edmx>

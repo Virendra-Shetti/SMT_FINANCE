@@ -1,0 +1,89 @@
+{
+	"selectedKey": "root1",
+	"navigation": [
+		{
+			"title": "Home",
+			"icon": "sap-icon://home",
+			"key":"root1"
+		},
+		{
+			"title": "Salary Management",
+			"icon": "sap-icon://monitor-payments",
+			"key":"root2"
+		},
+		{
+			"title": "Employee Database",
+			"icon": "sap-icon://database",
+			"key":"root3"
+		},
+		{
+			"title": "Salary Slip",
+			"icon": "sap-icon://switch-classes",
+			"key":"root4"
+		}
+	],
+	"selectMonths":[
+{
+"name":"Janaury",
+"monthKey":"01"
+},
+{
+"name":"February",
+"monthKey":"02"
+},
+
+{
+"name":"March",
+"monthKey":"03"
+},
+
+{
+"name":"April",
+"monthKey":"04"
+},
+
+{
+"name":"May",
+"monthKey":"05"
+},
+
+{
+"name":"June",
+"monthKey":"06"
+},
+
+{
+"name":"July",
+"monthKey":"07"
+},
+
+{
+"name":"August",
+"monthKey":"08"
+},
+
+{
+"name":"September",
+"monthKey":"09"
+},
+
+{
+"name":"October",
+"monthKey":"10"
+},
+
+{
+"name":"November",
+"monthKey":"11"
+},
+
+{
+"name":"December",
+"monthKey":"12"
+}
+
+]
+	
+
+	
+}
