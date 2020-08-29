@@ -58,7 +58,7 @@ sap.ui.define([
 		},
 		//////////////////////////////get the binding path from the fragment///////////////////
 		onConfirmEmp: function (oEvent) {
-			debugger;
+			
 
 			var oPath = oEvent.getParameter("selectedItem").getBindingContextPath();
 			this.getView().byId("idObjectPLay").bindElement("EmpSalary>" + oPath);
