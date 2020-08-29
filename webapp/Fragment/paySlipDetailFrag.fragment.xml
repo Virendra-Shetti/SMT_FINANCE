@@ -1,0 +1,89 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<Dialog title="Employee Pay Slip" titleAlignment="Center">
+		<HBox>
+		<form:SimpleForm id="idPayForm1" >
+			<VBox>
+				<HBox >
+				<Label text='{i18n>EmpId}:'></Label>
+				<Text text="{EmpSalary>EmpId}" id="idPay1"></Text>
+				</HBox>
+				<HBox>
+				<Label text="{i18n>EmpName}:"></Label>
+				<Text text="{EmpSalary>EmpName}" id="idPay2"></Text>
+				</HBox>
+					<HBox>
+				<Label text="{i18n>Standdays}:"></Label>
+				<Text text="{EmpSalary>StandardDays}" id="idPay3"></Text>
+				</HBox>
+					<HBox>
+				<Label text="{i18n>Workedays}:"></Label>
+				<Text text="{EmpSalary>WorkedDays}" id="idPay4"></Text>
+				</HBox>
+					<HBox>
+				<Label text="{i18n>EmpDesign}:"></Label>
+				<Text text="{EmpSalary>Designation}" id="idPay5"></Text>
+				</HBox>
+					<HBox>
+				<Label text='{i18n>BankName}: '></Label>
+				<Text text="{EmpSalary>BankName}" id="idPay6"></Text>
+				</HBox>
+					<HBox>
+				<Label text="{i18n>BankAC}:"></Label>
+				<Text text="{EmpSalary>BankACNO}" id="idPay7"></Text>
+				</HBox>
+					<HBox >
+				<Label text="{i18n>PANNo}:"></Label>
+				<Text text="{EmpSalary>PANNo}" id="idPay8"></Text>
+				</HBox>
+			</VBox>
+	
+			<VBox>
+				<HBox >
+				<Label text='{i18n>EmpMonth}: '></Label>
+				<Text text="{EmpSalary>Month}" id="idPay9"></Text>
+				</HBox>
+				<HBox >
+				<Label text='{i18n>EmpYear}: '></Label>
+				<Text text="{EmpSalary>Year}" id="idPay10"></Text>
+				</HBox>
+					<HBox >
+				<Label text='{i18n>EmpLOPDays}:'></Label>
+				<Text text="{EmpSalary>LOP}" id="idPay11"></Text>
+				</HBox>
+					<HBox >
+				<Label text='{i18n>EmpOTHrs}:'></Label>
+				<Text text="{EmpSalary>nightShift}" id="idPay12"></Text>
+				</HBox>
+				<HBox >
+				<Label text='{i18n>EmpBasic}: '></Label>
+				<Text text="{EmpSalary>BasicSalary}" id="idPay13"></Text>
+				</HBox>
+				<HBox>
+				<Label text="{i18n>EmpAllow}:"></Label>
+				<Text text="{EmpSalary>Allowance}" id="idPay14"></Text>
+				</HBox>
+					<HBox>
+				<Label text="{i18n>EmpLOPDeduc}:"></Label>
+				<Text text="{EmpSalary>LOPDeduction}" id="idPay15"></Text>
+				</HBox>
+					<HBox>
+				<Label text='{i18n>EmpOTpay}: '></Label>
+				<Text text="{EmpSalary>NightShiftPay}" id="idPay16"></Text>
+				</HBox>
+				<!--	<HBox>-->
+				<!--<Label text="Bank A/c Number:"></Label>-->
+				<!--<Text text="{EmpSalary>PANNo}"></Text>-->
+				<!--</HBox>-->
+					<HBox >
+				<Label text="{i18n>EmpOTpay}:"></Label>
+				<Text text="{EmpSalary>totalSalary}" id="idPay17"></Text>
+				</HBox>
+			</VBox>
+		</form:SimpleForm>
+				</HBox>
+				<HBox>
+		<Button text="{i18n>buttonDownLoad}" press="onPressDownload" width="150px"></Button>
+		<Button text="{i18n>buttonClose}" press="onPressClose" width="150px"></Button>
+		</HBox>
+	</Dialog>
+</core:FragmentDefinition>

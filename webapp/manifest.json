@@ -13,7 +13,7 @@
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
 		}
-			
+
 	},
 
 	"sap.ui": {
@@ -60,13 +60,13 @@
 					"bundleName": "SF.SMT_FINANCE.i18n.i18n"
 				}
 			},
-			"":{
+			"": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/MockData/data.json"
 			},
-			"EmpSalary":{
-				"type":"sap.ui.model.json.JSONModel",
-				"uri":"model/MockData/EmployeeDetail.json"
+			"EmpSalary": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/MockData/EmployeeDetail.json"
 
 			}
 		},
@@ -100,5 +100,107 @@
 				}
 			}
 		}
+	},
+	"crossNavigation": {
+		"inbounds": {
+			"intent1": {
+				"signature": {
+					"parameters": {},
+					"additionalParameters": "allowed"
+				},
+				"semanticObject": "smtfinance",
+				"action": ""
+			}
+		}
 	}
+},
+"sap.ui": {
+	"technology": "UI5",
+	"icons": {
+		"icon": "",
+		"favIcon": "",
+		"phone": "",
+		"phone@2": "",
+		"tablet": "",
+		"tablet@2": ""
+	},
+	"deviceTypes": {
+		"desktop": true,
+		"tablet": true,
+		"phone": true
+	}
+},
+"sap.ui5": {
+	"flexEnabled": false,
+	"rootView": {
+		"viewName": "SF.SMT_FINANCE.view.App",
+		"type": "XML",
+		"async": true,
+		"id": "App"
+	},
+	"dependencies": {
+		"minUI5Version": "1.65.6",
+		"libs": {
+			"sap.ui.layout": {},
+			"sap.ui.core": {},
+			"sap.m": {}
+		}
+	},
+	"contentDensities": {
+		"compact": true,
+		"cozy": true
+	},
+	"models": {
+		"i18n": {
+			"type": "sap.ui.model.resource.ResourceModel",
+			"settings": {
+				"bundleName": "SF.SMT_FINANCE.i18n.i18n"
+			}
+		},
+		"": {
+			"type": "sap.ui.model.json.JSONModel",
+			"uri": "model/MockData/data.json"
+		},
+		"EmpSalary": {
+			"type": "sap.ui.model.json.JSONModel",
+			"uri": "model/MockData/EmployeeDetail.json"
+		}
+	},
+	"resources": {
+		"css": [{
+			"uri": "css/style.css"
+		}]
+	},
+	"routing": {
+		"config": {
+			"routerClass": "sap.m.routing.Router",
+			"viewType": "XML",
+			"async": true,
+			"viewPath": "SF.SMT_FINANCE.view",
+			"controlAggregation": "pages",
+			"controlId": "app",
+			"clearControlAggregation": false
+		},
+		"routes": [{
+			"name": "TargetApp",
+			"pattern": "RouteApp",
+			"target": [
+				"TargetApp"
+			]
+		}],
+		"targets": {
+			"TargetApp": {
+				"viewType": "XML",
+				"transition": "slide",
+				"clearControlAggregation": false,
+				"viewId": "App",
+				"viewName": "App"
+			}
+		}
+	}
+},
+"sap.platform.hcp": {
+	"uri": "webapp",
+	"_version": "1.1.0"
+}
 }
