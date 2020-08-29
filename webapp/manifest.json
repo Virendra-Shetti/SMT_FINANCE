@@ -12,7 +12,6 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
-<<<<<<< HEAD
 		}
 			
 	},
@@ -68,71 +67,7 @@
 			"EmpSalary":{
 				"type":"sap.ui.model.json.JSONModel",
 				"uri":"model/MockData/EmployeeDetail.json"
-=======
-		},
-			"dataSources": {
-			"mainService": {
-				"uri": "/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/metadata.xml"
-				}
-			}
-		}
-	},
 
-	"sap.ui": {
-		"technology": "UI5",
-		"icons": {
-			"icon": "",
-			"favIcon": "",
-			"phone": "",
-			"phone@2": "",
-			"tablet": "",
-			"tablet@2": ""
-		},
-		"deviceTypes": {
-			"desktop": true,
-			"tablet": true,
-			"phone": true
-		}
-	},
-
-	"sap.ui5": {
-		"flexEnabled": false,
-		"rootView": {
-			"viewName": "SF.SMT_FINANCE.view.App",
-			"type": "XML",
-			"async": true,
-			"id": "App"
-		},
-		"dependencies": {
-			"minUI5Version": "1.65.6",
-			"libs": {
-				"sap.ui.layout": {},
-				"sap.ui.core": {},
-				"sap.m": {}
-			}
-		},
-		"contentDensities": {
-			"compact": true,
-			"cozy": true
-		},
-		"models": {
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "SF.SMT_FINANCE.i18n.i18n"
-				}
-			},
-			"":{
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/MockData/data.json"
-			},
-			"EmpSalary":{
-					"dataSource": "mainService"
->>>>>>> refs/remotes/origin/master
 			}
 		},
 		"resources": {

@@ -44,7 +44,6 @@
 									<items>
 										<z:InteractiveBarChart labelWidth="25%" selectionChanged="selectionChanged" press="press">
 											<z:bars>
-<<<<<<< HEAD
 												<z:InteractiveBarChartBar label="SAP UI5 Consultant" value="4"/>
 												<z:InteractiveBarChartBar label="ABAP Consultant" value="4"/>
 												<z:InteractiveBarChartBar label="HR Manager" value="1"/>
@@ -65,28 +64,6 @@
 												<z:InteractiveDonutChartSegment label="ABAP Consultant" value="28" displayedValue="28%"/>
 												<z:InteractiveDonutChartSegment label="HR Manager" value="25" displayedValue="25%"/>
 												<!--<z:InteractiveDonutChartSegment label="Technical" value="15" displayedValue="15%"/>-->
-=======
-												<z:InteractiveBarChartBar label="HR" value="10"/>
-												<z:InteractiveBarChartBar label="Financial" value="20"/>
-												<z:InteractiveBarChartBar label="Technical" value="70"/>
-											</z:bars>
-										</z:InteractiveBarChart>
-									</items>
-								</FlexBox>
-							</l:content>
-						</l:Grid>
-						<l:Grid>
-							<Label text="Resource Chart II" design="Bold"></Label>
-							<l:content>
-								<FlexBox width="30rem" height="13rem" alignItems="left" justifyContent="SpaceBetween">
-									<items>
-										<z:InteractiveDonutChart selectionChanged="onSelectionChanged" displayedSegments="4" press="press">
-											<z:segments>
-												<z:InteractiveDonutChartSegment label="Management" value="32" displayedValue="32.0%"/>
-												<z:InteractiveDonutChartSegment label="HR" value="28" displayedValue="28%"/>
-												<z:InteractiveDonutChartSegment label="Financial" value="25" displayedValue="25%"/>
-												<z:InteractiveDonutChartSegment label="Technical" value="15" displayedValue="15%"/>
->>>>>>> refs/remotes/origin/master
 											</z:segments>
 										</z:InteractiveDonutChart>
 									</items>
