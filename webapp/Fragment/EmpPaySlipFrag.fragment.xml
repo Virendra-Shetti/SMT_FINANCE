@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout = "sap.ui.layout">
+	
+						<ToolbarSpacer></ToolbarSpacer>
+		<SearchField search="onSearch" liveChange="onSearchEmp" width="25%">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow"/>
+			</layoutData>
+		</SearchField>
+			
+<Table items="{EmpSalary>/EmployeeDetail}" selectionChange="onPressEmpSal" mode="SingleSelectMaster" id="idEmpTable">
+	<columns>
+		<Column>
+			<Label text="{i18n>EmpId}"></Label>
+		</Column>
+			<Column>
+			<Label text="{i18n>EmpName}"></Label>
+		</Column>
+		<Column>
+			<Label text="{i18n>EmpMonth}"></Label>
+		</Column>
+		<Column>
+			<Label text="{i18n>EmpYear}"></Label>
+		</Column>
+		<!--	<Column>-->
+		<!--	<Label text="Status"></Label>-->
+		<!--</Column>-->
+	</columns>
+	<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{EmpSalary>EmpId}"></Text>
+					<Text text="{EmpSalary>EmpName}"></Text>
+					<!--<Text text="{EmpSalary>Designation}"></Text>-->
+					<Text text="{EmpSalary>Month}"></Text>
+					<!--<Text text="{EmpSalary>BasicSalary}"></Text>-->
+					<Text text="{EmpSalary>Year}"></Text>
+				    <!--<Text text="Pending"></Text>-->
+				</cells>
+			</ColumnListItem>
+		</items>
+</Table>
+</core:FragmentDefinition>

@@ -42,14 +42,14 @@
 						<blocks >
 							<form:SimpleForm>
 								<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
-									<m:Label text="PAN Number:"></m:Label>
+									<m:Label text="{i18n>PANNo}:"></m:Label>
 									<m:Input value="{EmpSalary>PANNo}" editable="false" width="300px" id="idPAN"></m:Input>
-									<m:Label text="Bank Name:"></m:Label>
+									<m:Label text="{i18n>BankName}:"></m:Label>
 									<m:Input value="{EmpSalary>BankName}" editable="false" width="300px" id="idBankName"></m:Input>
-									<m:Label text="Bank A/C Number:"></m:Label>
+									<m:Label text="{i18n>BankAC}:"></m:Label>
 									<m:Input value="{EmpSalary>BankACNO}" editable="false" width="300px" id="idBankAc"></m:Input>
-									<m:Label text="IFSC Code:"></m:Label>
-									<m:Input value="{EmpSalary>BankName}" editable="false" width="300px" id="idIFSC"></m:Input>
+									<m:Label text="{i18n>IFSCCode}:"></m:Label>
+									<m:Input value="{EmpSalary>IFSCCode}" editable="false" width="300px" id="idIFSC"></m:Input>
 								</m:VBox>
 							</form:SimpleForm>
 						</blocks>
@@ -60,7 +60,7 @@
 				<subSections>
 					<ObjectPageSubSection title="Attendence">
 						<blocks>
-							<form:SimpleForm>
+							<form:SimpleForm id="myForm">
 								<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
 									<m:ComboBox placeholder="Month" width="300px" items="{/selectMonths}" id="monthCombo" selectedKey="08">
 										<core:Item key="{monthKey}" text="{name}"></core:Item>
@@ -72,16 +72,16 @@
 										<core:Item key="04" text="2019"></core:Item>
 										<core:Item key="05" text="2020"></core:Item>
 									</m:ComboBox>
-									<m:Label text="Standard days" required="true"></m:Label>
-									<m:Input value="{EmpSalary>StandardDays}" editable="true" width="300px" id="idStandDays" maxLength="2" 
-									 type="Number" liveChange="onSubmitLive"></m:Input>
-									<m:Label text="worked days" required="true"></m:Label>
-									<m:Input value="{EmpSalary>WorkedDays}" editable="true" width="300px" id="idWorkeddays" maxLength="2"
-									type="Number" liveChange="onSubmitLive1"></m:Input>
-									<m:Label text="LOP"></m:Label>
-									<m:Input value="{EmpSalary>LOP}" editable="true" width="300px" id="idLopSal" maxLength="2"></m:Input>
-									<m:Label text="Overtime in hrs"></m:Label>
-									<m:Input value="{EmpSalary>nightShift}" editable="true" width="300px" id="idNightshift" maxLength="2"></m:Input>
+									<m:Label text="{i18n>Standdays}:" required="true"></m:Label>
+									<m:Input value="{daysModel>Standarddays}" editable="false" width="300px" id="idStandDays" maxLength="2" 
+									 type="Number" liveChange="onSubmitLive" ></m:Input>
+									<m:Label text="{i18n>Workedays}:" required="true"></m:Label>
+									<m:Input value="{daysModel>workeddays}" editable="false" width="300px" id="idWorkeddays" maxLength="2"
+									type="Number" liveChange="onSubmitLive1" ></m:Input>
+									<m:Label text="{i18n>EmpLOPDays}:"></m:Label>
+									<m:Input value="{daysModel>LOP}" editable="false" width="300px" id="idLopSal" maxLength="2"></m:Input>
+									<m:Label text="{i18n>EmpOTHrs}:"></m:Label>
+									<m:Input value="{daysModel>OvertimeHrs}" editable="false" width="300px" id="idNightshift" maxLength="2"></m:Input>
 								</m:VBox>
 							</form:SimpleForm>
 						</blocks>
@@ -94,19 +94,19 @@
 						<blocks>
 							<form:SimpleForm>
 								<m:VBox alignContent="Center" alignItems="Center" justifyContent="Center">
-									<m:Label text="Basic Salary"></m:Label>
+									<m:Label text="{i18n>EmpBasic}:"></m:Label>
 									<m:Input value="{EmpSalary>BasicSalary}" editable="false" width="300px" id="IdBasicSal"></m:Input>
-									<m:Label text="Allowance"></m:Label>
+									<m:Label text="{i18n>EmpAllow}:"></m:Label>
 									<m:Input value="{EmpSalary>Allowance}" editable="false" width="300px" id="idEmpAllow"></m:Input>
-									<m:Label text="LOP deduction"></m:Label>
+									<m:Label text="{i18n>EmpLOPDeduc}:"></m:Label>
 									<m:Input value=" " editable="true" width="300px" id="idLopDed" submit="onChangeLop"></m:Input>
-									<m:Label text="OT/Night shift"></m:Label>
+									<m:Label text="{i18n>EmpOTpay}:"></m:Label>
 									<m:Input value=" " editable="true" width="300px" id="idOt" submit="onChangeOt"></m:Input>
-									<m:Label text="Total Salary"></m:Label>
+									<m:Label text="{i18n>EmptSalary}:"></m:Label>
 									<m:Input value=" " editable="false" width="300px" id="idTotalSal"></m:Input>
 									<m:HBox>
-										<m:Button text="Submit" width="150px" press="onPressSubmit"></m:Button>
-										<m:Button text="Clear" width="150px" press="onPressClear"></m:Button>
+										<m:Button text="{i18n>buttonSubmit}" width="150px" press="onPressSubmit"></m:Button>
+										<m:Button text="{i18n>buttonClear}" width="150px" press="onPressClear"></m:Button>
 									</m:HBox>
 								</m:VBox>
 							</form:SimpleForm>

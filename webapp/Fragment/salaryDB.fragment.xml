@@ -25,22 +25,22 @@
 	<Table items="{EmpSalary>/EmployeeDetail}" id="myEmpTbl" selectionChange="onSalListPress" mode="SingleSelectMaster">
 		<columns>
 			<Column>
-				<Text text="Employee ID"></Text>
+				<Text text="{i18n>EmpId}"></Text>
 			</Column>
 			<Column>
-				<Text text="Employee Name"></Text>
+				<Text text="{i18n>EmpName}"></Text>
 			</Column>
 			<Column>
-				<Text text="Designation"></Text>
+				<Text text="{i18n>EmpDesign}"></Text>
 			</Column>
 			<Column>
-				<Text text="Month"></Text>
+				<Text text="{i18n>EmpMonth}"></Text>
 			</Column>
 			<Column>
-				<Text text="Salary"></Text>
+				<Text text="{i18n>EmpBasic}"></Text>
 			</Column>
 			<Column>
-				<Text text="Year"></Text>
+				<Text text="{i18n>EmpYear}"></Text>
 			</Column>
 		</columns>
 		<items>
@@ -64,5 +64,4 @@
 	<!--<st:SmartTable id="smartTable_ResponsiveTable"  tableType="Table" editable="false" entitySet="EmpSalary>/EmployeeDetail"-->
 	<!--	useVariantManagement="true" useTablePersonalisation="true" header="Signiwis Employes" showRowCount="true" useExportToExcel="true"-->
 	<!--	enableAutoBinding="true" persistencyKey="SmartTableAnalytical_Explored" initiallyVisibleFields="EmpSalary>EmpId,EmpSalary>EmpName"></st:SmartTable>-->
-
 </core:FragmentDefinition>
