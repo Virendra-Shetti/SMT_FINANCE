@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+
+	<SelectDialog title="Employees" class="sapUiPopwithPadding" items="{EmpSalary>/EmployeeDetail}" confirm="onConfirmEmp"
+	cancel="onCancelDialog"  contentWidth="300px" search="onSearchName" id="idSelectDialog">
+		<ObjectListItem intro="{EmpSalary>EmpId}" title="{EmpSalary>EmpName}" >
+			<ObjectAttribute text="{EmpSalary>Designation}"> </ObjectAttribute>
+		</ObjectListItem>
+		
+	</SelectDialog>
+	
+</core:FragmentDefinition>

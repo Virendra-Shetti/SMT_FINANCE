@@ -1,0 +1,20 @@
+/* Enter your custom styles here */
+
+.horzontalgridcls{
+	margin-top:120px;
+}
+
+.loginLabl{
+	color:#00e6ac;
+	font:  small-caps bold 15px/50px Arial, Sans-serif;
+}
+.sapMBarPH {
+    background-color: #2f3c48;
+}
+.sapMDialog>header.sapMDialogTitle .sapMTitle{
+	color:white;
+}
+
+.textStyleClass{
+	color:white !important;
+}

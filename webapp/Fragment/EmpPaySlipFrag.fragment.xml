@@ -1,0 +1,43 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout = "sap.ui.layout">
+	<OverflowToolbar>
+		<Label text="Employee Salary Slips" design="Bold"></Label>
+						<ToolbarSpacer></ToolbarSpacer>
+		<SearchField search="onSearch" liveChange="onSearchEmp" width="25%" placeholder="Search by ID, Name">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow"/>
+			</layoutData>
+		</SearchField>
+		</OverflowToolbar>	
+<Table items="{EmpSalary>/EmployeeDetail}" selectionChange="onPressEmpSal" mode="SingleSelectMaster" id="idEmpTable">
+	<columns>
+		<Column>
+			<Label text="{i18n>EmpId}" class="textStyleClass"></Label>
+		</Column>
+			<Column>
+			<Label text="{i18n>EmpName}" class="textStyleClass"></Label>
+		</Column>
+		<Column>
+			<Label text="{i18n>EmpMonth}" class="textStyleClass"></Label>
+		</Column>
+		<Column>
+			<Label text="{i18n>EmpYear}" class="textStyleClass"></Label>
+		</Column>
+		<!--	<Column>-->
+		<!--	<Label text="Status"></Label>-->
+		<!--</Column>-->
+	</columns>
+	<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{EmpSalary>EmpId}"></Text>
+					<Text text="{EmpSalary>EmpName}"></Text>
+					<!--<Text text="{EmpSalary>Designation}"></Text>-->
+					<Text text="{EmpSalary>Month}"></Text>
+					<!--<Text text="{EmpSalary>BasicSalary}"></Text>-->
+					<Text text="{EmpSalary>Year}"></Text>
+				    <!--<Text text="Pending"></Text>-->
+				</cells>
+			</ColumnListItem>
+		</items>
+</Table>
+</core:FragmentDefinition>
